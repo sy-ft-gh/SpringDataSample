@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Thymeleaf Test here</title>
+    </head>
+    <body>
+        <p>weather1</p>
+        <table border="1">
+            <tr th:each="w : ${weathers1}" th:object="${w}">
+                <td th:text="*{city}"></td>
+                <td th:text="*{temp_Lo}"></td>
+                <td th:text="*{temp_Hi}"></td>
+                <td th:text="*{prcp}"></td>
+            </tr>
+        </table>
+        <p>weather2</p>
+        <table border="1" >
+            <tr th:each="w : ${weathers2}" th:object="${w}">
+                <td th:text="*{city}"></td>
+                <td th:text="*{temp_Lo}"></td>
+                <td th:text="*{temp_Hi}"></td>
+                <td th:text="*{prcp}"></td>
+            </tr>
+        </table>
+        <p>weather3</p>
+        <table border="1" >
+            <tr th:each="w : ${weathers3}" th:object="${w}">
+                <td th:text="*{city}"></td>
+                <td th:text="*{temp_Lo}"></td>
+                <td th:text="*{temp_Hi}"></td>
+                <td th:text="*{prcp}"></td>
+            </tr>
+        </table>
+    </body>
+</html>

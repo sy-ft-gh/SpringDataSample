@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Transactional Test here</title>
+    </head>
+    <body>
+        <div th:object="${inputForm}">
+            <ul>
+              <li th:each="e : ${#fields.detailedErrors()}"
+                th:class="${e.global}? globalerrMsg : fielderrMsg" th:text="${e.getFieldName() + ':'+ e.message}" />
+            </ul>
+            <p th:if="${status == 0}" th:text="登録が完了しました"></p>
+            <p th:if="${status == 1}" th:text="登録に失敗しました"></p>
+        </div>    
+    </body>
+</html>
